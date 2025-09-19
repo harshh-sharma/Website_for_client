@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himanshu Homes | Luxury Real Estate</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="logo">Himanshu Homes</a>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item"><a href="#" id="nav-home" class="active" onclick="showPage('home')">Home</a></li>
+          <li class="nav-item"><a href="#" id="nav-about" onclick="showPage('about')">About</a></li>
+          <li class="nav-item"><a href="#" id="nav-properties" onclick="showPage('properties')">Properties</a></li>
+          <li class="nav-item"><a href="#" id="nav-projects" onclick="showPage('projects')">Projects</a></li>
+          <li class="nav-item"><a href="#" id="nav-services" onclick="showPage('services')">Services</a></li>
+          <li class="nav-item"><a href="#" id="nav-contact" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="cta-button">Get Started</a>
+      <div class="mobile-menu-btn" id="mobileMenu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+ <!-- HOME PAGE -->
+<main class="page-content active" id="home-page">
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find Your Dream Luxury Home</h1>
+      <p>Exclusive properties in the world’s most desirable locations.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary" onclick="showPage('properties-page')">View Properties</a>
+        <a href="#" class="btn-secondary" onclick="showPage('contact-page')">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US (directly below hero) -->
+  <section class="section light">
+    <div class="container">
+      <div class="section-head">
+        <h2>Why Choose Himanshu Homes?</h2>
+        <p>Trusted partner in luxury real estate for over 20 years.</p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <h3>500+</h3>
+          <p>Luxury Properties Sold</p>
+        </div>
+        <div class="stat">
+          <h3>10k+</h3>
+          <p>Satisfied Clients</p>
+        </div>
+        <div class="stat">
+          <h3>12</h3>
+          <p>Offices Worldwide</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+  <!-- ABOUT PAGE -->
+  <main class="page-content" id="about-page">
+    <section class="about-hero">
+      <div class="container">
+        <h2>About Us</h2>
+        <p class="lead">We redefine luxury living with unmatched expertise and dedication.</p>
+      </div>
+    </section>
+    <section class="about-content">
+      <div class="container about-grid">
+        <div>
+          <h2>Our Mission</h2>
+          <p>To connect discerning clients with world-class properties that match their lifestyle.</p>
+          <ul class="tick-list">
+            <li>Exclusive listings worldwide</li>
+            <li>Trusted by global investors</li>
+            <li>Luxury-focused service</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Our Vision</h2>
+          <p>Becoming the world’s most trusted brand for luxury real estate.</p>
+          <ul class="tick-list">
+            <li>Innovative property solutions</li>
+            <li>Client-first approach</li>
+            <li>Global presence</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PROPERTIES PAGE -->
+  <main class="page-content" id="properties-page">
+    <section class="properties-hero">
+      <div class="container">
+        <h2>Our Properties</h2>
+        <p class="lead">Browse through our collection of exclusive listings.</p>
+      </div>
+    </section>
+    <div class="properties-filters">
+      <div class="filters">
+        <button class="filter-btn active" onclick="filterProperties('all')">All</button>
+        <button class="filter-btn" onclick="filterProperties('residential')">Residential</button>
+        <button class="filter-btn" onclick="filterProperties('luxury')">Luxury</button>
+        <button class="filter-btn" onclick="filterProperties('commercial')">Commercial</button>
+        <button class="filter-btn" onclick="filterProperties('investment')">Investment</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="properties-grid" id="propertiesGrid"></div>
+    </div>
+  </main>
+
+    <!-- PROJECTS PAGE -->
+  <main class="page-content" id="projects-page">
+    <section class="projects-hero">
+      <div class="container">
+        <h2>Our Projects</h2>
+        <p class="lead">Explore our landmark luxury real estate projects worldwide.</p>
+      </div>
+    </section>
+    <div class="container projects-grid">
+
+      <!-- PROJECT CARD 1 -->
+      <div class="project-card">
+        <h3>Skyline Residences</h3>
+        <div class="slider">
+          <div class="slides">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Skyline Residences 1">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Skyline Residences 2">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Skyline Residences 3">
+          </div>
+          <button class="prev" onclick="moveSlide(this, -1)">❮</button>
+          <button class="next" onclick="moveSlide(this, 1)">❯</button>
+        </div>
+        <p>Modern luxury apartments overlooking the city skyline.</p>
+      </div>
+
+      <!-- PROJECT CARD 2 -->
+      <div class="project-card">
+        <h3>Oasis Villas</h3>
+        <div class="slider">
+          <div class="slides">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 1">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 2">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 3">
+          </div>
+          <button class="prev" onclick="moveSlide(this, -1)">❮</button>
+          <button class="next" onclick="moveSlide(this, 1)">❯</button>
+        </div>
+        <p>Exclusive villas surrounded by nature and luxury amenities.</p>
+      </div>
+
+         <div class="project-card">
+        <h3>Oasis Villas</h3>
+        <div class="slider">
+          <div class="slides">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 1">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 2">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 3">
+          </div>
+          <button class="prev" onclick="moveSlide(this, -1)">❮</button>
+          <button class="next" onclick="moveSlide(this, 1)">❯</button>
+        </div>
+        <p>Exclusive villas surrounded by nature and luxury amenities.</p>
+      </div>
+
+         <div class="project-card">
+        <h3>Oasis Villas</h3>
+        <div class="slider">
+          <div class="slides">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 1">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 2">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 3">
+          </div>
+          <button class="prev" onclick="moveSlide(this, -1)">❮</button>
+          <button class="next" onclick="moveSlide(this, 1)">❯</button>
+        </div>
+        <p>Exclusive villas surrounded by nature and luxury amenities.</p>
+      </div>
+
+         <div class="project-card">
+        <h3>Oasis Villas</h3>
+        <div class="slider">
+          <div class="slides">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 1">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 2">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 3">
+          </div>
+          <button class="prev" onclick="moveSlide(this, -1)">❮</button>
+          <button class="next" onclick="moveSlide(this, 1)">❯</button>
+        </div>
+        <p>Exclusive villas surrounded by nature and luxury amenities.</p>
+      </div>
+
+         <div class="project-card">
+        <h3>Oasis Villas</h3>
+        <div class="slider">
+          <div class="slides">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 1">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 2">
+            <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="Oasis Villas 3">
+          </div>
+          <button class="prev" onclick="moveSlide(this, -1)">❮</button>
+          <button class="next" onclick="moveSlide(this, 1)">❯</button>
+        </div>
+        <p>Exclusive villas surrounded by nature and luxury amenities.</p>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- SERVICES PAGE -->
+  <main class="page-content" id="services-page">
+    <section class="services-hero">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p class="lead">Tailored solutions for your property journey.</p>
+      </div>
+    </section>
+    <div class="container services-grid">
+      <div class="service-card">
+        <div class="service-icon">🏡</div>
+        <h3>Property Sales</h3>
+        <p>Exclusive luxury listings worldwide.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💼</div>
+        <h3>Investment Advisory</h3>
+        <p>Expert guidance for profitable real estate investments.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <h3>Development</h3>
+        <p>Partnering on high-end development projects.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- CONTACT PAGE -->
+  <main class="page-content" id="contact-page">
+    <section class="contact-hero">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p class="lead">We’d love to hear from you.</p>
+      </div>
+    </section>
+    <div class="container contact-content">
+      <div class="contact-grid">
+        <div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <p>123 Luxury Ave, Beverly Hills, CA</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <p>+1 (800) 555-1234</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <p>info@Himanshu Homes.com</p>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label>Name *</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-section">
+        <h3>Himanshu Homes</h3>
+        <p>Your trusted partner in luxury real estate worldwide.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('about')">About</a></li>
+          <li><a href="#" onclick="showPage('properties')">Properties</a></li>
+          <li><a href="#" onclick="showPage('services')">Services</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="socials">
+          <a href="#">🌐</a>
+          <a href="#">📘</a>
+          <a href="#">🐦</a>
+          <a href="#">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Himanshu Homes. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
