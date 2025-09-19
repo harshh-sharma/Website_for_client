@@ -422,3 +422,125 @@ img{max-width:100%;display:block}
   /* background-color: red; */
   text-align: center;
 }
+
+
+/* Container Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Project Card */
+.project-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.project-card p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  text-align: center;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 220px; /* Fixed height */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Slides */
+.slides img {
+  width: 100%;
+  height: 220px; /* Fixed height */
+  object-fit: contain; /* keeps images proportional */
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+.slides img:hover {
+  transform: scale(1.05);
+}
+
+/* Prev/Next buttons */
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.slider button:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.slider .prev {
+  left: 10px;
+}
+.slider .next {
+  right: 10px;
+}
+
+
+/* Project Description */
+.project-card p {
+  background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+  border-radius: 0 0 12px 12px;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: justify;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover p {
+  background: linear-gradient(135deg, #fff, #f9f9f9);
+  color: #222;
+}
+
+
+.card-footer {
+  background: #fafafa;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  border-radius: 0 0 16px 16px;
+}
+
+.card-footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
